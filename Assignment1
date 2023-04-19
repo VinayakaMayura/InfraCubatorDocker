@@ -1,0 +1,12 @@
+1) Start an nginx containers
+    docker pull nginx
+2) Port forward to local and check
+    docker run -d --name=nginx -p 8080:8080 nginx
+3) check logs
+    docker logs -f nginx
+4) Go inside the container
+    docker exec -it <container_id> /bin/bash
+    docker exec -it nginx /bin/bash
+5) Stop the container
+    docker stop nginx
+    docker rmi nginx
